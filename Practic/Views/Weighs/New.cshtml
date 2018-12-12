@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Methodic</h2>
+
+<div id="grid"></div>
+
+@section scripts{
+    <script>
+        var remoteDataSource = new kendo.data.DataSource({
+            transport: {
+                read: {
+                    url: "/api/Weighs",
+                    dataType: "json",
+                    type:"GET"
+
+                },
+                create: {
+                    url: "/api/Weighs",
+                    dataType: "json",
+                    type: "POST"
+                },
+                update: {
+                    url: "/api/Weighs",
+                    dataType: "json",
+                    type: "PUT"
+                },
+                destroy: {
+                    url: "/api/Weighs",
+                    dataType: "json",
+                    type: "DELETE"
+                }
+
+            },
+            schema: {
+                model: {
+                    id: "Id",
+                    fields: {
+                        Id: { editable: false, type: "number" },
+                        Name: { validation: { required: true } }
+                    }
+                }
+            }
+        });
+
+        $('#grid').kendoGrid({
+            dataSource: remoteDataSource,
+            height: 500,
+            toolbar: [{ name: "create", text: "Создать" }],
+            editable: "popup",
+            columns: [
+                {
+                    field: "WeighFull",
+                    title: "WeighFull"
+                },
+                {
+                    field: "WeighPacking",
+                    title: "WeighPacking"
+                },
+                {
+                    field: "WeighMaterial",
+                    title: "WeighMaterial"
+                },
+                {
+                    field: "WeighType",
+                    title: "WeighType"
+                },
+                {
+                    field: "WeighDetermine",
+                    title: "WeighDetermine"
+                },
+                {
+                    field: "WeighContamination",
+                    title: "WeighContamination"
+                },
+
+                {
+                    field: "AuditDate",
+                    title: "AuditDate"
+                },
+                {
+                    command: [{ name: "edit", text: "Изменить" }, { name: "destroy", text: "Удалить" }]
+                }
+            ]
+        });
+
+    </script>
+}

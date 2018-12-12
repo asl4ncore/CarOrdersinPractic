@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Practic.ViewModel.RouteTypeViewModels>
+
+@{
+    ViewBag.Title = "Get";
+}
+
+<div class="container">
+
+
+    <table class="table">
+        <tr>
+            <th>Дата поступления</th>
+
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Name</td>
+
+            </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,82 @@
+﻿@model Practic.Models.Weigh
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Weigh</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighFull)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighFull)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighPacking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighPacking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighMaterial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighMaterial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighDetermine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighDetermine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighContamination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighContamination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuditDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuditDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

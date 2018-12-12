@@ -1,0 +1,90 @@
+﻿@model Practic.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Determine.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Determine.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Material.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Material.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Route.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Route.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RouteType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RouteType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MachineContractor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MachineContractor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Consignment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Consignment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuditDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuditDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

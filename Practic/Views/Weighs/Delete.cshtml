@@ -1,0 +1,88 @@
+﻿@model Practic.Models.Weigh
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Weigh</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighFull)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighFull)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighPacking)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighPacking)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighMaterial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighMaterial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighDetermine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighDetermine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeighContamination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeighContamination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AuditDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuditDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
