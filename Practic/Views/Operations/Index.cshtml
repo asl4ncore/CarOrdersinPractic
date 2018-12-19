@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Practic.Models.Models.Lombard.Operation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.SurName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pledge.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceGram)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceProducts)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PriceRefund)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommissionPercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StorageDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OperationDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OperatorName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.SurName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pledge.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceGram)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceProducts)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PriceRefund)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommissionPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StorageDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OperationDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OperatorName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -43,6 +43,7 @@
                     <li class="active">
                         <a href="~/"> <i class="menu-icon fa fa-dashboard"></i>Главная</a>
                         <h3 class="menu-title">Панель управления</h3><!-- /.menu-title -->
+
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-sign-in"></i>Авторизация</a>
                         <ul class="sub-menu children dropdown-menu">
@@ -57,6 +58,15 @@
                                 <li><i class="menu-icon fa fa-sign-in"></i><a href="~/Account/Register">Регистрация</a></li>
                             }
 
+                        </ul>
+                    </li>
+					<li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-award"></i>Управление Ломбардом</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href='@Url.Content("~/Clients/")'>Клиенты</a></li>
+                            <li><i class="fa fa-table"></i><a href='@Url.Content("~/Pledges/")'>Залог</a></li>
+                            <li><i class="fa fa-table"></i><a href='@Url.Content("~/PledgeTypes/")'>Тип залога</a></li>
+                            <li><i class="fa fa-table"></i><a href='@Url.Content("~/Operations/")'>Операции</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -149,7 +159,7 @@
 
     <script src="https://kendo.cdn.telerik.com/2018.2.620/js/jquery.min.js"></script>
     <script src="https://kendo.cdn.telerik.com/2018.2.620/js/kendo.all.min.js"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     @RenderSection("scripts", required: false)
     <script>
         $(document).ready(function () {

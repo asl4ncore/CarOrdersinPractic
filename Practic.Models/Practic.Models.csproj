@@ -47,18 +47,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Determine.cs" />
-    <Compile Include="Models\JobType.cs" />
-    <Compile Include="Models\Machine.cs" />
-    <Compile Include="Models\Material.cs" />
+    <Compile Include="Migrations\201812192212328_AddLombardContext.cs" />
+    <Compile Include="Migrations\201812192212328_AddLombardContext.Designer.cs">
+      <DependentUpon>201812192212328_AddLombardContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Lombard\Client.cs" />
+    <Compile Include="Models\Lombard\LombardContext.cs" />
+    <Compile Include="Models\Lombard\Operation.cs" />
+    <Compile Include="Models\Lombard\Pledge.cs" />
+    <Compile Include="Models\Lombard\PledgeType.cs" />
+    <Compile Include="Models\CarOrders\Determine.cs" />
+    <Compile Include="Models\CarOrders\JobType.cs" />
+    <Compile Include="Models\CarOrders\Machine.cs" />
+    <Compile Include="Models\CarOrders\Material.cs" />
     <Compile Include="Models\BaseTables\BaseDictionary.cs" />
     <Compile Include="Models\BaseTables\BaseTable.cs" />
-    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\CarOrders\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Provider.cs" />
-    <Compile Include="Models\Route.cs" />
-    <Compile Include="Models\RouteType.cs" />
-    <Compile Include="Models\Weigh.cs" />
+    <Compile Include="Models\CarOrders\Provider.cs" />
+    <Compile Include="Models\CarOrders\Route.cs" />
+    <Compile Include="Models\CarOrders\RouteType.cs" />
+    <Compile Include="Models\CarOrders\Weigh.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812192212328_AddLombardContext.resx">
+      <DependentUpon>201812192212328_AddLombardContext.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

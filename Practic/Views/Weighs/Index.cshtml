@@ -51,7 +51,7 @@
                                     WeighType: { type: "boolean" },
                                     WeighDetermine: { type: "boolean" },
                                     WeighContamination: { type: "number", validation: { min: 0, required: true } },
-									OrderId: { field: "OrderId", type: "number", defaultValue: 0 },
+									//OrderId: { field: "OrderId", type: "number", defaultValue: 0 },
                                     AuditDate: { type: "datetime" }
                                 }
                             }
@@ -70,7 +70,7 @@
                         { field: "WeighType",title: "Тип взешивание",  editor: customBool1Editor },
                         { field: "WeighDetermine", title: "Определение тары", editor: customBool2Editor },
                         { field: "WeighContamination", title: "Загрезненость" },
-                        { field: "OrderId", title: "OrderId" },
+                        //{ field: "OrderId", title: "OrderId" },
                         { command: [{ name: "edit", text: "Изменить" }, { name: "destroy", text: "Удалить" }], width: "200px" }],
                     editable: "popup"
                 });

@@ -251,18 +251,22 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\WeighsController.cs" />
-    <Compile Include="Controllers\DeterminesController.cs" />
+    <Compile Include="Controllers\CarOrders\DeterminesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\JobTypesController.cs" />
-    <Compile Include="Controllers\MachinesController.cs" />
-    <Compile Include="Controllers\MaterialsController.cs" />
-    <Compile Include="Controllers\OrdersController.cs" />
-    <Compile Include="Controllers\ProvidersController.cs" />
-    <Compile Include="Controllers\ProvTypesController.cs" />
-    <Compile Include="Controllers\RoutesController.cs" />
-    <Compile Include="Controllers\RouteTypesController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="Controllers\WeighsController.cs" />
+    <Compile Include="Controllers\CarOrders\JobTypesController.cs" />
+    <Compile Include="Controllers\CarOrders\MachinesController.cs" />
+    <Compile Include="Controllers\CarOrders\MaterialsController.cs" />
+    <Compile Include="Controllers\CarOrders\OrdersController.cs" />
+    <Compile Include="Controllers\CarOrders\ProvidersController.cs" />
+    <Compile Include="Controllers\CarOrders\ProvTypesController.cs" />
+    <Compile Include="Controllers\CarOrders\RoutesController.cs" />
+    <Compile Include="Controllers\CarOrders\RouteTypesController.cs" />
+    <Compile Include="Controllers\CarOrders\ValuesController.cs" />
+    <Compile Include="Controllers\CarOrders\WeighsController.cs" />
+    <Compile Include="Controllers\Lombard\ClientsController.cs" />
+    <Compile Include="Controllers\Lombard\OperationsController.cs" />
+    <Compile Include="Controllers\Lombard\PledgesController.cs" />
+    <Compile Include="Controllers\Lombard\PledgeTypesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -380,6 +384,11 @@
     <Content Include="assets\js\vendor\jquery-1.11.3.min.js" />
     <Content Include="assets\js\vendor\jquery-2.1.4.min.js" />
     <Content Include="assets\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="gulp.js" />
+    <Content Include="Scripts\es6\main.js" />
+    <Content Include="Scripts\es6\person.js" />
+    <Content Include="ViewModels\main.js" />
+    <Content Include="Views\Weighs\forVue.js" />
     <Content Include="assets\js\widgets.js" />
     <Content Include="assets\scss\bootstrap\bootstrap-grid.css" />
     <Content Include="assets\scss\bootstrap\bootstrap-reboot.css" />
@@ -1483,6 +1492,8 @@
     <Content Include="assets\scss\_gauge.scss" />
     <Content Include="assets\scss\_switches.scss" />
     <Content Include="assets\scss\_widgets.scss" />
+    <Content Include="package.json" />
+    <Content Include="webpack.config.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -1494,6 +1505,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\vue.js" />
+    <Content Include="Scripts\vue.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1580,6 +1593,27 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Weighs\New.cshtml" />
     <Content Include="Views\Weighs\Index.cshtml" />
+    <Content Include="Views\Weighs\Vue.cshtml" />
+    <Content Include="Views\Pledges\Create.cshtml" />
+    <Content Include="Views\Pledges\Delete.cshtml" />
+    <Content Include="Views\Pledges\Details.cshtml" />
+    <Content Include="Views\Pledges\Edit.cshtml" />
+    <Content Include="Views\Pledges\Index.cshtml" />
+    <Content Include="Views\Clients\Create.cshtml" />
+    <Content Include="Views\Clients\Delete.cshtml" />
+    <Content Include="Views\Clients\Details.cshtml" />
+    <Content Include="Views\Clients\Edit.cshtml" />
+    <Content Include="Views\Clients\Index.cshtml" />
+    <Content Include="Views\PledgeTypes\Create.cshtml" />
+    <Content Include="Views\PledgeTypes\Delete.cshtml" />
+    <Content Include="Views\PledgeTypes\Details.cshtml" />
+    <Content Include="Views\PledgeTypes\Edit.cshtml" />
+    <Content Include="Views\PledgeTypes\Index.cshtml" />
+    <Content Include="Views\Operations\Create.cshtml" />
+    <Content Include="Views\Operations\Delete.cshtml" />
+    <Content Include="Views\Operations\Details.cshtml" />
+    <Content Include="Views\Operations\Edit.cshtml" />
+    <Content Include="Views\Operations\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1666,6 +1700,10 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

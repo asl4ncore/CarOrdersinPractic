@@ -10,6 +10,8 @@ using Practic.Infrastructure.Data;
 using Practic.Models;
 using Practic.Unit;
 using Practic.Infrastructure.Business;
+using Newtonsoft.Json;
+
 namespace Practic.Controllers
 {
     public class WeighsController : Controller
@@ -31,10 +33,26 @@ namespace Practic.Controllers
            
             return View();
         }
-        public ActionResult OnNew()
+        public ActionResult Vue()
         {
+            var serverModel = JsonConvert.SerializeObject(new
+            {
+                Name = "Marco",
+                Surname = "Muscat",
+                Description = "Vue data loaded from razor!"
+            });
 
-            return View();
+            return View(new SampleModel()
+            {
+                Data = serverModel
+            });
+    }
+        public class SampleModel
+        {
+            public string Name { get; set; }
+            public string Surname { get; set; }
+            public string Description { get; set; }
+            public string Data { get; set; }
         }
         // GET: Weighs/Details/5
         public ActionResult Details(int? id)
